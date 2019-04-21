@@ -1,13 +1,12 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmasha-h <fmasha-h@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wconnell <wconnell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 14:29:57 by wconnell          #+#    #+#             */
-/*   Updated: 2019/02/13 16:02:19 by fmasha-h         ###   ########.fr       */
+/*   Updated: 2019/02/13 14:15:37 by wconnell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +38,7 @@ typedef struct			s_map
 	int					size;
 }						t_map;
 
-void					**ft_solver(t_list *list, char **arr, int size);
+char					**ft_solver(t_list *list, char **arr, int size);
 int						ft_solvemap(t_list *list, char **arr, int size);
 void					place(int x, int y, t_list *list, char **arr);
 void					placedot(int x, int y, t_list *list, char **arr);

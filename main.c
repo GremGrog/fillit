@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmasha-h <fmasha-h@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wconnell <wconnell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 14:33:06 by wconnell          #+#    #+#             */
-/*   Updated: 2019/02/13 15:59:55 by fmasha-h         ###   ########.fr       */
+/*   Updated: 2019/02/13 14:15:44 by wconnell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char			**solve(char *s)
 	ft_megastart(new, &head);
 	g = ft_get_map_size(i);
 	map = ft_create_map(g);
-	ft_solver(head->next, map, g);
+	map = ft_solver(head->next, map, g);
 	ft_free_list(head->next);
 	free(head);
 	ft_free_arr(new);

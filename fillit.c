@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmasha-h <fmasha-h@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wconnell <wconnell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/01 01:43:27 by wconnell          #+#    #+#             */
-/*   Updated: 2019/02/13 16:01:35 by fmasha-h         ###   ########.fr       */
+/*   Updated: 2019/02/13 14:14:43 by wconnell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,12 +86,13 @@ int				ft_solvemap(t_list *list, char **arr, int size)
 	return (0);
 }
 
-void			ft_solver(t_list *list, char **map, int size)
+char			**ft_solver(t_list *list, char **arr, int size)
 {
-	while (!(ft_solvemap(list, map, size)))
+	while (!(ft_solvemap(list, arr, size)))
 	{
-		ft_free_arr(map);
+		ft_free_arr(arr);
 		size++;
-		map = ft_create_map(size);
+		arr = ft_create_map(size);
 	}
+	return (arr);
 }
